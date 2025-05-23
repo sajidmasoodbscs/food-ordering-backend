@@ -37,13 +37,13 @@ const userSchema = new Schema({
     },
     phone: {
         type: String,
-        trim: true,
-        validate: {
-            validator: function(v) {
-                return /^\d{10}$/.test(v); // Example: Validates 10-digit phone numbers
-            },
-            message: props => `${props.value} is not a valid phone number!`
-        }
+        trim: true
+        // validate: {
+        //     validator: function(v) {
+        //         return /^\d{10}$/.test(v); // Example: Validates 10-digit phone numbers
+        //     },
+        //     message: props => `${props.value} is not a valid phone number!`
+        // }
     },
     zipCode: {
         type: String,
